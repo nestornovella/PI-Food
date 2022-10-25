@@ -1,11 +1,12 @@
-import { useParams } from "react-router-dom"
+import { Redirect, Route, useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import Styles from "../styles/detail.module.css"
-import { getAllRecipes, recipeDetail } from "../store/actions"
+import { getAllRecipes, recipeDetail, refreshAPI } from "../store/actions"
 import Loading from "./loading"
 import { capitalize } from "../functions/functions"
 import { Link } from "react-router-dom"
+import axios from "axios"
 
 export default function DetailRecipe() {
     const recipe = useSelector(state => state.recipeDetail)
@@ -19,6 +20,12 @@ export default function DetailRecipe() {
         if (!data.length) { dispatch(getAllRecipes()) }
 
     }, [data])
+
+    function deleteRecipe (){
+        axios.delete(`http://localhost:3001/api/recipes/${id}`)
+        .then(response => console.log(response))
+        .then(dispatch(refreshAPI()))
+    }
 
 
     console.log(recipe)
@@ -56,9 +63,9 @@ export default function DetailRecipe() {
                     </div>
                     <h2>STEPS...</h2>
                     {recipe.steps ? recipe.steps.map((e, i) => {
-
                         return <div key={i} className={Styles.steps}><h4>{i + 1}</h4><p>{e}</p></div>
                     }) : <h1>{"No Steps..."}</h1>}
+                    {recipe.itsCreated && <Link to={"/recipes"}><button className={Styles.deleteButton} onClick={deleteRecipe}>delete</button></Link>}
                 </div>
                 :
                 <div className={Styles.loading}>{<Loading />}</div>}

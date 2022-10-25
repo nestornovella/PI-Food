@@ -11,7 +11,7 @@ export default function CardRecipe({ id, name, diets, image, scores, dishTypes }
             <h5>{`Id: ${id}`}</h5>
             <h3>{capitalize(name)}</h3>
             {dishTypes&&
-            <div className={Styles.diets}>
+            <div className={Styles.dishTypes}>
                 
                 <h4>dishTypes:</h4>
                 <p>{dishTypes.map((e, i) => {

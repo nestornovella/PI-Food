@@ -136,4 +136,16 @@ router.post("/", async (req, res, next) => {
 })
 
 
+router.delete("/:id", async(req, res)=>{
+    const { id } = req.params
+
+    try {
+        const deleted = await Recipe.destroy({where:{id:id}})
+        deleted ? res.json(`You have eliminated ${deleted} recipes`) : throwError("Could not delete the recipe.") 
+    } catch (error) {
+        
+    }
+})
+
+
 module.exports = router;

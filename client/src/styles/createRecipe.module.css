@@ -9,6 +9,12 @@
 
 }
 
+.container button:hover{
+    background-color: red;
+    color: white;
+
+}
+
 .mainContainer {
     width: 450px;
     color: white;

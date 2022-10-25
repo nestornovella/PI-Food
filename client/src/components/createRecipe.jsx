@@ -88,6 +88,7 @@ export default function CreateRecipe() {
                 steps: [],
                 diets: []
             })
+            alert("Recipe Created...")
         } else {
             setError({ ...error, submit: "los campos requeridos deben estar completos" })
         }

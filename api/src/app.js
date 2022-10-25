@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const recipesRroutes = require('./routes/recipes.js');
 const dietsRoutes = require("./routes/diets.js")
-const favouritesRoutes = require("./routes/favourites.js")
+
 
 require('./db.js');
 
@@ -26,7 +26,7 @@ server.use((req, res, next) => {
 
 server.use('/api/recipes', recipesRroutes);
 server.use("/api/diets", dietsRoutes)
-server.use("/api/favourites", favouritesRoutes)
+
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   const status = err.status || 500;

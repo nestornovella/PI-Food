@@ -10,6 +10,9 @@
 
 .filter select{
   border-radius: 5px;
+  margin-right: 8px;
+
+ 
 }
 .filter select option{
     color: green;

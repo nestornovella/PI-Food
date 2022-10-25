@@ -107,3 +107,16 @@
 .loading{
     margin-top: 150px;
 }
+
+.deleteButton{
+    background-color: red;
+    color: white;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.deleteButton:hover{
+    cursor: pointer;
+    background-color: yellow;
+    color: black;
+}
