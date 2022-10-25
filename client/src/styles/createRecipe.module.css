@@ -1,0 +1,193 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    background: url("https://www.jotaelealimentos.com.mx/wp-content/uploads/2014/05/menu.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.mainContainer {
+    width: 450px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: auto;
+    margin-top: 60px;
+    box-shadow: 4px 4px 4px 2px black;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.mainContainer input {
+    margin-bottom: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: solid white 1px;
+    background-color: transparent;
+}
+
+.mainContainer select {
+    margin-left: 150px;
+    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: solid white 1px;
+    background-color: transparent;
+}
+
+.mainContainer option {
+    color: green;
+
+}
+
+.mainContainer textarea {
+    margin-bottom: 20px;
+    color: white;
+    outline: none;
+
+    border-bottom: solid white 1px;
+    background-color: transparent;
+
+}
+
+.mainContainer button {
+    width: max-content;
+    font-weight: 600;
+    color: white;
+    background-color: green;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    margin: auto;
+    margin-left: 5px;
+}
+
+.divOrder {
+    display: flex;
+    flex-direction: column;
+}
+
+.lineOrder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divButtons {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.divButtons button {
+    background-color: yellow;
+    color: black;
+    font-weight: 700;
+    margin: auto;
+}
+
+.stepsAdd {
+    display: flex;
+
+
+}
+
+.stepsAdd input {
+    margin-top: 20px;
+    width: 250px;
+}
+
+.healthScore {
+    margin-top: 20px;
+
+}
+
+
+.lastContainer {
+    width: 450px;
+    height: 390px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: auto;
+    margin-top: 60px;
+    margin-right: 120px;
+    box-shadow: 4px 4px 4px 2px black;
+    border-radius: 10px;
+    padding: 30px;
+    overflow: auto;
+
+}
+
+.lastContainer img {
+    width: 250px;
+    border-radius: 8px;
+}
+
+.contentVist {
+    display: flex;
+    flex-direction: row;
+}
+
+.imageDiet {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.steps div {
+    display: flex;
+    flex-direction: row;
+}
+
+.steps p {
+    margin-right: 3px;
+}
+
+.steps button {
+    width: 22px;
+    color: white;
+    background-color: red;
+}
+
+.steps button:hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+.diet {
+    height: 30px;
+    margin-left: 10px;
+    padding: 5px;
+    color: white;
+    background-color: green;
+}
+
+.diet:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.divOrder p {
+    color: red;
+    font-size: 12px;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}

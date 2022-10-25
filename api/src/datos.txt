@@ -1,0 +1,14 @@
+key: 52d7f6fc1b164dbb957bfa2494532f82
+Url: https://api.spoonacular.com/recipes/complexSearch?apiKey=52d7f6fc1b164dbb957bfa2494532f82&number=110&addRecipeInformation=true
+
+
+[ ] Receta con las siguientes propiedades:
+ID: *
+Nombre *
+Resumen del plato *
+Nivel de "comida saludable" (health score)
+Paso a paso
+
+[ ] Tipo de dieta con las siguientes propiedades:
+ID
+Nombre

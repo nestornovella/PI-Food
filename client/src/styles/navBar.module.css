@@ -1,0 +1,31 @@
+.navBar{
+    display: flex;
+    justify-content: center;
+    padding: 20px  0px 10px 0px;
+    background-color:transparent;
+}
+
+.navBar input{
+    padding: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: rgba(18, 50, 237, 0.393) ;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.navBar button{
+    padding: 8px 5px 8px 5px;
+    margin-left:30px;
+    color: white;
+    border-radius: 7px;
+    background-color: green;
+    font-weight: 700;
+}
+
+.navBar button:hover{
+    cursor: pointer;
+    color: orangered;
+}
