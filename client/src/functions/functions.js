@@ -89,6 +89,7 @@ export function dietsFiltred(recipes, value){
   recipes.filter( e => typeof e.Diets[0] === "string"? e.Diets.includes(value) : e.Diets.find(e => e.name === value))
 }
 
+
 export function itsCreated(array, action){
 
   if(action === "Not_Created"){
@@ -109,18 +110,18 @@ export   function validations(input) {
   let error = {}
   if (input.name) {
       if (!/^[A-Za-z? ]{3,}$/g.test(input.name)) {
-          error.name = "Min 3 characters without symbols or numbers."
+          error.name = "⚠️ Min 3 characters without symbols or numbers."
       }
   }
   if (input.summary) {
       if (!/.{10,}/g.test(input.summary)) {
-          error.summary = "Min 10 characters."
+          error.summary = "⚠️ Min 10 characters."
       }
   }
 
   if (input.image) {
       if (!/^https?\:\/\/[a-zA-Z\S]*$/g.test(input.image)) {
-          error.image = 'La url debe contener "https://"'
+          error.image = '⚠️ La url debe contener "https://"'
       }
   }
 

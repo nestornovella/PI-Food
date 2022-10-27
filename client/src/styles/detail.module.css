@@ -12,16 +12,14 @@
 
 .cardRecipe{
     color: white;
-    margin-top: 80px;
-
-    border: solid orangered 1px;
+    margin-top: 80px;   
     border-radius: 15px;
     margin-right: 30px;
     margin-bottom: 50px;
     padding: 10px;
     padding-right: 3px;
 
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
   
 }
 .cardRecipe img{
@@ -35,7 +33,7 @@
 .cardRecipe h2{
     max-width: 500px;
     text-align: center;
-    color: green;
+    color: greenyellow;
     margin-left: 30px;
     margin-right: 50px;
     margin-bottom: 10px;
@@ -74,7 +72,7 @@
 }
 
 .diets{
-    color: yellow;
+    color: greenyellow;
     display: flex;
    
     align-items: center;
@@ -88,7 +86,7 @@
     margin-right: 20px;
 }
 .summary h4{
-    color: orangered;
+    color: red;
     font-size: 15px;
 }
 .steps{
@@ -100,7 +98,7 @@
     margin-bottom: 10px;
 }
 .steps h4{
-    color: orangered;
+    color: greenyellow;
     
 }
 
@@ -113,6 +111,7 @@
     color: white;
     padding: 4px;
     border-radius: 5px;
+    
 }
 
 .deleteButton:hover{

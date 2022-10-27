@@ -22,7 +22,7 @@ html{
 body{
   width: 100%;
   height: 100vh;
-  background:url("./img/fondo-comida-black.png");
+  background:url("./img/fondo-comida-blackHen.png");
   background-attachment:fixed;
   background-size: cover;
   background-position: center;
@@ -43,4 +43,8 @@ a{
 a:hover{
   color: green;
   cursor: pointer;
+}
+
+.active{
+  background-color: red;
 }

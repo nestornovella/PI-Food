@@ -10,6 +10,7 @@ export const SEARCH = "SEARCH"
 export const RECIPE_DETAIL = "RECIPE_DETAIL"
 export const REFRESH_API = "REFRESH_API"
 export const ITS_CREATED_DATA = "ITS_CREATED_DATA"
+export const ASIGN_PAGE = "ASIGN_PAGE"
 
 export function getAllRecipes (){
     return function(dispatch){
@@ -30,6 +31,13 @@ export function refreshAPI (){
         type:REFRESH_API
     }
 } 
+
+export function asignPage(value){
+    return {
+        type:ASIGN_PAGE,
+        payload:value
+    }
+}
 
 export function changePage(value){
     return{

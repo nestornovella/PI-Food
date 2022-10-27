@@ -27,5 +27,5 @@
 
 .navBar button:hover{
     cursor: pointer;
-    color: orangered;
+    background-color: red ;
 }

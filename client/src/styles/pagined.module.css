@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+
+
+
+.buttons{
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    margin-left: 15px;
+    border-radius: 50%;
+    width: 25px;
+ 
+}
+
+.buttons:hover{
+    background-color: red;
+    color: white;
+}

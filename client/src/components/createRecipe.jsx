@@ -78,8 +78,6 @@ export default function CreateRecipe() {
         if (getLengthOfObject(error) === 0 && input.name && input.image && input.summary) {
             createRecipe(input)
             dispatch(refreshAPI())
-            console.log("La data se envio", input)
-            console.log(error)
             setInput({
                 name: "",
                 summary: "",
@@ -90,7 +88,7 @@ export default function CreateRecipe() {
             })
             alert("Recipe Created...")
         } else {
-            setError({ ...error, submit: "los campos requeridos deben estar completos" })
+            setError({ ...error, submit: "⚠️ los campos requeridos deben estar completos" })
         }
     }
 
@@ -110,6 +108,7 @@ export default function CreateRecipe() {
     }
 
     return (
+
         <div className={Styles.container}>
             <div className={Styles.mainContainer}>
                 <div className={Styles.flex}>
@@ -161,7 +160,7 @@ export default function CreateRecipe() {
 
                     <div className={Styles.divButtons}>
                         <button type="submit">Create</button>
-                      
+
                     </div>
                     {<div className={Styles.divOrder}><p>{error.submit}</p></div>}
                 </form>

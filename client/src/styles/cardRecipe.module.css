@@ -1,13 +1,17 @@
 
 
 
-
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .scoresDanger{
     color:red
 }
 .scoresGood{
-    color: rgb(37, 220, 31);
+    color: yellowgreen;
 }
 .scoresYellow{
     color: yellow;
@@ -30,7 +34,7 @@
     padding: 10px;
     padding-right: 3px;
     width: 320px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
 
@@ -41,7 +45,7 @@
 .CardRecipe h3{
     margin: 10px;
     text-align: center;
-    color: rgb(37, 220, 31)green;
+    color: yellowgreen;
 }
 
 .CardRecipe img{
@@ -61,7 +65,7 @@
     display: flex;
     align-items: center;
     margin-left: 10px;
-    color: rgb(31, 220, 211);
+    color: yellow;
 }
 
 .dishTypes{

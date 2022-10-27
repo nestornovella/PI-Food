@@ -1,5 +1,5 @@
 import { dietsFiltred, itsCreated, orderData, searchRecipes } from "../functions/functions"
-import { ORDER_ALL_DATA, FILTRED_BY_DIETS, GET_ALL_DIETS, GET_ALL_RECIPES, ITS_CREATED_DATA, MAX_PAGES, PAGE_CHANGE, RECIPE_DETAIL, REFRESH_API, SEARCH, filtredAllData } from "./actions"
+import { ORDER_ALL_DATA, FILTRED_BY_DIETS, GET_ALL_DIETS, GET_ALL_RECIPES, ITS_CREATED_DATA, MAX_PAGES, PAGE_CHANGE, RECIPE_DETAIL, REFRESH_API, SEARCH, filtredAllData, ASIGN_PAGE, maxPages } from "./actions"
 
 const initialState = {
     allData: [],//copia
@@ -44,13 +44,19 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 maxPages: state.filtredData.length
             }
+        case ASIGN_PAGE:
+            return{
+                ...state,
+                page: action.payload
+            }
 
         case PAGE_CHANGE:
             var pageType = action.payload
 
             return {
                 ...state,
-                page: pageType === "last" ? state.page < 1 ? state.page : state.page - 1 : state.page > state.maxPages / 9 - 1 ? state.page : state.page + 1,
+                page: pageType > state.maxPages/9 ? state.page : pageType 
+                // page: typeof pageType === "number" ? state.page = pageType : pageType === "last" ? state.page < 1 ? state.page : state.page - 1 : state.page > state.maxPages / 9 - 1 ? state.page : state.page + 1,
 
             }
 

@@ -6,7 +6,7 @@ export default function CardRecipe({ id, name, diets, image, scores, dishTypes }
 
 
     return (
-        <div>
+        <div className={Styles.container}>
             <img height={231} width={313} src={image} alt={name} />
             <h5>{`Id: ${id}`}</h5>
             <h3>{capitalize(name)}</h3>

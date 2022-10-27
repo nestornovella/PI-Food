@@ -8,9 +8,9 @@ import NoResults from "./noResults"
 
 
 
-export default function RenderRecipes (){
+export default function Home (){
     const recipes = useSelector(state => state.filtredData) //renderizo
-    const allData = useSelector(state => state.allData)
+    const allData = useSelector(state => state.allData) //copia
     const page = useSelector(state => state.page)
     const pages =useSelector(state=>state.maxPages)
 
@@ -39,7 +39,7 @@ export default function RenderRecipes (){
                 <div key={e.id} className={Styles.CardRecipe}>
                  <CardRecipe  scores={e.healthScore} name={e.name} dishTypes={e.dishTypes} diets={e.Diets} id={e.id} image={e.image}/>
             </div>)
-        }) : allData.length>0 ? <NoResults/> : <Loading/> }
+        }) : !allData.length>0 ? <Loading/> : <NoResults/> }
         </div>
     ) // filtredData:[]   alldata:[]  
    

@@ -1,4 +1,4 @@
-import { Redirect, Route, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import Styles from "../styles/detail.module.css"
@@ -35,7 +35,7 @@ export default function DetailRecipe() {
             {recipe ?
                 <div className={Styles.cardRecipe}>
                     <div className={Styles.firstData}>
-                        <img width={400} src={recipe.image} alt="" />
+                        <img width={400} height={300} src={recipe.image} alt="" />
                         <div>
                             <div className={Styles.nameButton}>
                                 <h2>{recipe.name && capitalize(recipe.name)}</h2>
@@ -48,7 +48,7 @@ export default function DetailRecipe() {
                                     return typeof e == "string" ? i < recipe.Diets.length - 1 ? `${capitalize(e)}, ` : e : i < recipe.Diets.length - 1 ? `${capitalize(e.name)}, ` : e.name
                                 })}</p>
                             </div>
-                            {recipe.dishTypes&&
+                            {recipe.dishTypes &&
                             <div className={Styles.diets}>
                                 <h4>dishTypes: </h4>
                                 <p>{recipe.dishTypes?.map((e, i) => {
@@ -63,9 +63,9 @@ export default function DetailRecipe() {
                     </div>
                     <h2>STEPS...</h2>
                     {recipe.steps ? recipe.steps.map((e, i) => {
-                        return <div key={i} className={Styles.steps}><h4>{i + 1}</h4><p>{e}</p></div>
+                        return <div key={i} className={Styles.steps}><h4>{`${i + 1})`}</h4><p>{e}</p></div>
                     }) : <h1>{"No Steps..."}</h1>}
-                    {recipe.itsCreated && <Link to={"/recipes"}><button className={Styles.deleteButton} onClick={deleteRecipe}>delete</button></Link>}
+                    {recipe.itsCreated && <Link to={"/recipes"}><button className={Styles.deleteButton} onClick={deleteRecipe}>🗑️</button></Link>}
                 </div>
                 :
                 <div className={Styles.loading}>{<Loading />}</div>}

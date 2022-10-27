@@ -143,7 +143,7 @@ router.delete("/:id", async(req, res)=>{
         const deleted = await Recipe.destroy({where:{id:id}})
         deleted ? res.json(`You have eliminated ${deleted} recipes`) : throwError("Could not delete the recipe.") 
     } catch (error) {
-        
+        next(error)
     }
 })
 

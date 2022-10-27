@@ -8,13 +8,17 @@ export default function FilterRecipe (){
 
     const page = useSelector(state => state.page)
     const diets = useSelector(state=> state.diets)
+   
 
     useEffect(()=>{
         dispatch(getAllDiets())
     },[])
 
     function handlePage(e){
-        dispatch(changePage(e.target.name))
+        e.target.name === "last"?
+        dispatch(changePage(page > 0 ? parseInt(page)-1 : 0))
+        :
+        dispatch(changePage( parseInt(page)+1))
     }
 
     function orderHandler(e){
@@ -45,7 +49,7 @@ export default function FilterRecipe (){
             <option value="score-Desc">H.Score Dsc</option>
         </select>
         <button name="last" onClick={handlePage} className={Styles.lastButton}></button>
-        <div className={Styles.counterPage}>{page +1}</div>
+        <div className={Styles.counterPage}>{parseInt(page)+1}</div>
         <button name="next" onClick={handlePage} className={Styles.nextButton}></button>
         <select onChange={filtredHandler}>
             <option value={"all-Diets"} >All diets.</option>
