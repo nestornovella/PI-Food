@@ -18,6 +18,27 @@
 }
 
 .buttons:hover{
-    background-color: red;
-    color: white;
+    background-color: yellowgreen;
+    color: black;
+    animation: scale 3s linear infinite;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1.2);
+    }
+    20%{
+        transform: scale(1);
+       
+    }
+    40%{
+        transform: scale(1.2);
+    }
+    60%{
+        transform: scale(1);
+        
+    }
+    100%{
+        transform: scale(1.2);
+    }
 }

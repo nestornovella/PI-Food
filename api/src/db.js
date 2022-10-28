@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Sequelize, Op } = require('sequelize');
-const {DB_USER, DB_PASSWORD, DB_HOST,API_KEY} = process.env;
+const {DB_USER, DB_PASSWORD, DB_HOST,API_KEY, API_KEY1, API_KEY2} = process.env;
 const recipeModel = require("./models/recipe.js")
 const dietsModel = require("./models/diets.js")
 
@@ -21,5 +21,7 @@ module.exports = {
   ...sequelize.models, 
   conn: sequelize,
   API_KEY,
+  API_KEY1, 
+  API_KEY2,
   Op
 };

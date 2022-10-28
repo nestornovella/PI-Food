@@ -155,13 +155,16 @@
 }
 
 .steps p {
-    margin-right: 3px;
+    
+    margin-right: 10px;
 }
 
 .steps button {
     width: 22px;
+    height: 25px;
     color: white;
     background-color: red;
+    margin-right: 10px;
 }
 
 .steps button:hover {

@@ -21,14 +21,12 @@ export default function DetailRecipe() {
 
     }, [data])
 
-    function deleteRecipe (){
-        axios.delete(`http://localhost:3001/api/recipes/${id}`)
-        .then(response => console.log(response))
-        .then(dispatch(refreshAPI()))
-    }
-
-
-    console.log(recipe)
+        function deleteRecipe (){
+            axios.delete(`http://localhost:3001/api/recipes/${id}`)
+            .then(response => console.log(response))
+            .then(dispatch(refreshAPI()))
+        }
+  
 
     return (
         <div className={Styles.body}>

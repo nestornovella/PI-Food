@@ -49,9 +49,10 @@ export default function CreateRecipe() {
     function handleSteps_Diets(e) {
 
         if (e.target.name === "steps") {
+            const value = e.target.parentNode.childNodes[0].value
             setInput({
                 ...input,
-                steps: [...input.steps, e.target.parentNode.childNodes[0].value]//e.target.parentNode.childNodes[1].value
+                steps: [...input.steps, value ? value : "<EMPTY STEP...>"]//e.target.parentNode.childNodes[1].value
 
             })
             e.target.parentNode.childNodes[0].value = ""
@@ -71,6 +72,9 @@ export default function CreateRecipe() {
         axios.post("http://localhost:3001/api/recipes", recipe)
             .then(response => console.log(response))
     }
+
+   
+    
 
 
     function handleSubmit(e) {
@@ -113,24 +117,24 @@ export default function CreateRecipe() {
             <div className={Styles.mainContainer}>
                 <div className={Styles.flex}>
                     <h2>NEW RECIPE...</h2>
-                    <Link to={"/recipes"}><button type="button">Back</button></Link>
+                    <Link to={"/recipes"}><button type="button">Return...</button></Link>
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className={Styles.lineOrder}>
                         <div className={Styles.divOrder}>
-                            <label >Recipe Name:</label>
+                            <label >Recipe Name *:</label>
                             <input onChange={handleChange} name="name" value={input.name} placeholder={"Recipe name"} type="text" />
                             {<p>{error.name}</p>}
                         </div>
 
                         <div className={Styles.divOrder}>
-                            <label >Url Image:</label>
+                            <label >Url Image *:</label>
                             <input onChange={handleChange} name="image" value={input.image} placeholder={"Examp: https://www.image.com"} type="text" />
                             {<p>{error.image}</p>}
                         </div>
                     </div>
                     <div className={Styles.divOrder}>
-                        <label >Sumary:</label>
+                        <label >Sumary *:</label>
                         <textarea onChange={handleChange} name="summary" value={input.summary} placeholder={"Summary..."} cols="30" rows="5"></textarea>
                         {<p>{error.summary}</p>}
                     </div>
@@ -139,7 +143,7 @@ export default function CreateRecipe() {
                         <div className={Styles.divOrder}>
                             <label>Steps:</label>
                             <div className={Styles.stepsAdd}>
-                                <input name="steps" placeholder={"text.."} type="text" />
+                                <input name="steps" placeholder={"Write a step..."} type="text" />
                                 <button onClick={handleSteps_Diets} type="button" name="steps" >add step</button>
                             </div>
                         </div>

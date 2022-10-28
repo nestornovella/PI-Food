@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { asignPage } from "../store/actions"
 import Styles from "../styles/pagined.module.css"
@@ -6,14 +5,13 @@ import Styles from "../styles/pagined.module.css"
 
 
 export default function Pagined() {
-    const maxPages = useSelector(state => state.maxPages)
-    const page = useSelector(state=> state.page)
+    const maxPages = useSelector(state => state.maxPages) //255   //50 5
     const dispatch = useDispatch()
 
-    const buttons = []
+    const buttons = [] //[button, button]
     
     for (let i = 0; i < maxPages/9; i++) {
-        buttons.push(<  button className={Styles.buttons} onClick={handlePage} value={i}>{i+1}</button>)
+        buttons.push(<button className={Styles.buttons} onClick={handlePage} value={i}>{i+1}</button>)
     }
     
     function handlePage(e){
