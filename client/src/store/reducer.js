@@ -116,7 +116,7 @@ export default function rootReducer(state = initialState, action) {
         case RECIPE_DETAIL:
             return {
                 ...state,
-                recipeDetail: [...state.allData].filter(r => r.id === action.payload)[0]
+                recipeDetail: [...state.allData].filter(r => typeof (r.id) === "number" ? r.id === parseInt(action.payload) : r.id === action.payload)[0]
             }
 
         default:
