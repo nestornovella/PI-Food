@@ -1,55 +1,76 @@
-.navBar{
+.navBar {
     display: flex;
     justify-content: center;
-    padding: 20px  0px 10px 0px;
-    background-color:transparent;
+    padding: 20px 0px 10px 0px;
+    background-color: transparent;
 }
 
-.navBar input{
+.navBar input {
     height: 30px;
     padding: 5px;
     margin-right: 20px;
     color: white;
     border: none;
-    outline: none;
-    background-color: rgb(130, 210, 11) ;
+    outline: cornflowerblue;
+    background-color: rgb(235, 248, 248);
     border-radius: 7px;
     font-size: 20px;
     font-weight: 700;
+    width: 40%;
 }
 
-.navBar button{
+
+.navBar input:focus {
+    background-color: white;
+    color: black;
+
+}
+
+.navBar button {
     width: 70px;
     height: 60px;
     margin-top: -10px;
     background: url("../img/createrRecipe.png");
     background-size: cover;
     background-position: center;
+    border: none;
 
 }
 
-.navBar button:hover{
+.navBar button:hover {
     opacity: 0.9;
-    animation:  scale 3s linear infinite;
+    animation: scale 3s linear infinite;
+}
+
+.container hr {
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }
 
 
-@keyframes scale{
-    0%{
+@keyframes scale {
+    0% {
         transform: scale(1.1);
     }
-    20%{
+
+    20% {
         transform: scale(1);
-       
+
     }
-    40%{
+
+    40% {
         transform: scale(1.1);
     }
-    60%{
+
+    60% {
         transform: scale(1);
-        
+
     }
-    100%{
+
+    100% {
         transform: scale(1.1);
     }
 }

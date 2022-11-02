@@ -8,21 +8,22 @@
 }
 
 .scoresDanger{
-    color:red
+    color:black
 }
 .scoresGood{
-    color: yellowgreen;
+    color: black;
 }
 .scoresYellow{
-    color: yellow;
+    color: black;
 }
 .renderRecipes{
-    margin-left: 35px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     color: red;
     font-weight: 700;
+ 
 
 }
 
@@ -34,7 +35,9 @@
     padding: 10px;
     padding-right: 3px;
     width: 320px;
-    background-color: rgba(0, 0, 0, 0.95);
+   color: white;
+   box-shadow: 2px 2px 2px 1px rgb(73, 72, 72);
+   background-color: rgb(255, 255, 255);
 }
 
 
@@ -46,7 +49,7 @@
 
     margin: 10px;
     text-align: center;
-    color: yellowgreen;
+    color: rgba(0, 0, 0, 0.745);
 }
 
 .CardRecipe img{
@@ -54,7 +57,7 @@
 }
 
 .CardRecipe h5{
-    color: rgb(164, 6, 164);
+    color: rgba(0, 0, 0, 0.745);
 }
 
 .scoreMore{
@@ -66,12 +69,12 @@
     display: flex;
     align-items: center;
     margin-left: 10px;
-    color: yellow;
+    color: rgba(0, 0, 0, 0.745);
 }
 
 .dishTypes{
     display: flex;
     align-items: center;
     margin-left: 10px;
-    color: yellow;
+    color: rgba(0, 0, 0, 0.745);
 }

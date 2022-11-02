@@ -9,7 +9,8 @@
 
 .buttons{
     background-color: transparent;
-    color: white;
+    color: rgba(245, 245, 245, 0.748);
+    border: none;
     font-weight: 600;
     margin-left: 15px;
     border-radius: 50%;

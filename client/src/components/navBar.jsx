@@ -6,15 +6,19 @@ import { Link } from "react-router-dom"
 export default function NavBar() {
     const dispatch = useDispatch()
 
-    function handleChange(e){
-       dispatch(search(e.target.value))
+    function handleChange(e) {
+        dispatch(search(e.target.value))
 
     }
 
     return (
-        <div className={Styles.navBar}>
-            <input placeholder="Search a recipe..." onChange={handleChange} type="text" />
-            <Link to={"/recipes/create"}><button></button></Link>
+        <div className={Styles.container}>
+            <div className={Styles.navBar}>
+                <input placeholder="Search a recipe..." onChange={handleChange} type="text" />
+                <Link to={"/recipes/create"}><button></button></Link>
+
+            </div>
+            <hr />
         </div>
     )
 }

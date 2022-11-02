@@ -13,6 +13,7 @@ export default function CardRecipe({ id, name, diets, image, scores, dishTypes }
             {dishTypes&&
             <div className={Styles.dishTypes}>
                 
+                
                 <h4>dishTypes:</h4>
                 <p>{dishTypes.map((e, i) => {
                     return typeof e == "string" ? i < dishTypes.length - 1 ? `${capitalize(e)}, ` : e : i < dishTypes.length - 1 ? `${capitalize(e.name)}, ` : e.name

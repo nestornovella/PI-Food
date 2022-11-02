@@ -22,11 +22,7 @@ html{
 body{
   width: 100%;
   height: 100vh;
-  background:url("./img/fondo-comida-blackHen.png");
-  background-attachment:fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: rgb(20, 19, 19);
 }
 
 

@@ -60,9 +60,10 @@ export default function CreateRecipe() {
         }
         else {
             if (e.target.value) {
+                
                 setInput({
                     ...input,
-                    [e.target.name]: [...input[e.target.name], e.target.value]
+                    [e.target.name]: !input.diets.includes(e.target.value) ? [...input[e.target.name], e.target.value] : [...input.diets]
                 })
             }
         }
