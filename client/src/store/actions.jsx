@@ -12,16 +12,18 @@ export const REFRESH_API = "REFRESH_API"
 export const ITS_CREATED_DATA = "ITS_CREATED_DATA"
 export const ASIGN_PAGE = "ASIGN_PAGE"
 
+export const serverBack = "https://pi-food-production-bf43.up.railway.app/api"
+
 export function getAllRecipes (){
     return function(dispatch){
-        axios.get("http://localhost:3001/api/recipes")
+        axios.get(`${serverBack}/recipes`)
         .then(response => dispatch({type:GET_ALL_RECIPES, payload:response.data}))
     }
 }
 
 export function getAllDiets (){
     return function(dispatch){
-        axios.get("http://localhost:3001/api/diets")
+        axios.get(`${serverBack}/diets`)
         .then(response => dispatch({type:GET_ALL_DIETS, payload:response.data}))
     }
 }

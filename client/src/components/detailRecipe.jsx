@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import Styles from "../styles/detail.module.css"
-import { getAllRecipes, recipeDetail, refreshAPI } from "../store/actions"
+import { getAllRecipes, recipeDetail, refreshAPI, serverBack } from "../store/actions"
 import Loading from "./loading"
 import { capitalize } from "../functions/functions"
 import { Link } from "react-router-dom"
@@ -22,7 +22,7 @@ export default function DetailRecipe() {
     }, [data])
 
         function deleteRecipe (){
-            axios.delete(`http://localhost:3001/api/recipes/${id}`)
+            axios.delete(`${serverBack}/recipes/${id}`)
             .then(response => console.log(response))
             .then(dispatch(refreshAPI()))
         }

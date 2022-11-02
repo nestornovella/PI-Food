@@ -2,7 +2,7 @@ import { useState } from "react"
 import Styles from "../styles/createRecipe.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
-import { getAllDiets, refreshAPI } from "../store/actions"
+import { getAllDiets, refreshAPI, serverBack } from "../store/actions"
 import defImage from "../img/ayuno.jpg"
 import { getLengthOfObject, validations } from "../functions/functions"
 import { Link } from "react-router-dom"
@@ -68,9 +68,9 @@ export default function CreateRecipe() {
             }
         }
     }
-
+    
     function createRecipe(recipe) {
-        axios.post("http://localhost:3001/api/recipes", recipe)
+        axios.post(`${serverBack}/recipes`, recipe)
             .then(response => console.log(response))
     }
 
