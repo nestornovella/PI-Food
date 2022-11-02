@@ -100,7 +100,7 @@ export default function CreateRecipe() {
     function deleteDiet(e) {
         setInput({
             ...input,
-            diets: input.diets.filter((diet, i) => i != e.target.value)
+            diets: input.diets.filter((diet, i) => i !== e.target.value)
         })
         console.log(e.target.value)
     }
@@ -108,7 +108,7 @@ export default function CreateRecipe() {
     function deleteSteps(e) {
         setInput({
             ...input,
-            steps: input.steps.filter((step, i) => i != e.target.value)
+            steps: input.steps.filter((step, i) => i !== e.target.value)
         })
     }
 

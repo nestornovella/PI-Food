@@ -19,7 +19,7 @@ export default function DetailRecipe() {
         dispatch(recipeDetail(id))
         if (!data.length) { dispatch(getAllRecipes()) }
 
-    }, [data])
+    }, [data, dispatch, id])
 
         function deleteRecipe (){
             axios.delete(`${serverBack}/recipes/${id}`)

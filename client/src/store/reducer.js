@@ -1,5 +1,5 @@
 import { dietsFiltred, itsCreated, orderData, searchRecipes } from "../functions/functions"
-import { ORDER_ALL_DATA, FILTRED_BY_DIETS, GET_ALL_DIETS, GET_ALL_RECIPES, ITS_CREATED_DATA, MAX_PAGES, PAGE_CHANGE, RECIPE_DETAIL, REFRESH_API, SEARCH, filtredAllData, ASIGN_PAGE, maxPages } from "./actions"
+import { ORDER_ALL_DATA, FILTRED_BY_DIETS, GET_ALL_DIETS, GET_ALL_RECIPES, ITS_CREATED_DATA, MAX_PAGES, PAGE_CHANGE, RECIPE_DETAIL, REFRESH_API, SEARCH, ASIGN_PAGE} from "./actions"
 
 const initialState = {
     allData: [],//copia
@@ -116,7 +116,7 @@ export default function rootReducer(state = initialState, action) {
         case RECIPE_DETAIL:
             return {
                 ...state,
-                recipeDetail: [...state.allData].filter(r => r.id == action.payload)[0]
+                recipeDetail: [...state.allData].filter(r => r.id === action.payload)[0]
             }
 
         default:

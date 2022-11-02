@@ -11,8 +11,9 @@ export default function FilterRecipe (){
    
 
     useEffect(()=>{
-        dispatch(getAllDiets())
-    },[])
+        if(!diets.length){
+        dispatch(getAllDiets())}
+    })
 
     function handlePage(e){
         e.target.name === "last"?
