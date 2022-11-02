@@ -120,7 +120,7 @@ export   function validations(input) {
   }
 
   if (input.image) {
-      if (!/^https?\/\/[a-zA-Z\S]*$/g.test(input.image)) {
+      if (!/^https:\/\/[a-zA-Z\S]*$/g.test(input.image)) {
           error.image = '⚠️ La url debe contener "https://"'
       }
   }
