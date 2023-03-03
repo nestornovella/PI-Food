@@ -22,7 +22,7 @@ export default function Pagined() {
 
     return (
         <div  className={Styles.container}>
-            {buttons.length && 
+            {buttons.length > 0 && 
             buttons.map((b, i) => <div key={i}>{b}</div>)
             }
         </div>

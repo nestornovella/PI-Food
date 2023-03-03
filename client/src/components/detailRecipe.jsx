@@ -18,16 +18,16 @@ export default function DetailRecipe() {
     useEffect(() => {
         dispatch(recipeDetail(id))
         if (!data.length) { dispatch(getAllRecipes()) }
-    
 
-    },[data, dispatch, id])
 
-        function deleteRecipe (){
-            axios.delete(`${serverBack}/recipes/${id}`)
+    }, [data, dispatch, id])
+
+    function deleteRecipe() {
+        axios.delete(`${serverBack}/recipes/${id}`)
             .then(response => console.log(response))
             .then(dispatch(refreshAPI()))
-        }
-  
+    }
+
 
     return (
         <div className={Styles.body}>
@@ -48,23 +48,25 @@ export default function DetailRecipe() {
                                 })}</p>
                             </div>
                             {recipe.dishTypes &&
-                            <div className={Styles.diets}>
-                                <h4>dishTypes: </h4>
-                                <p>{recipe.dishTypes?.map((e, i) => {
-                                    return typeof e == "string" ? i < recipe.dishTypes.length - 1 ? `${capitalize(e)}, ` : e : i < recipe.dishTypes.length - 1 ? `${capitalize(e.name)}, ` : e.name
-                                })}</p>
-                            </div>}
+                                <div className={Styles.diets}>
+                                    <h4>dishTypes: </h4>
+                                    <p>{recipe.dishTypes?.map((e, i) => {
+                                        return typeof e == "string" ? i < recipe.dishTypes.length - 1 ? `${capitalize(e)}, ` : e : i < recipe.dishTypes.length - 1 ? `${capitalize(e.name)}, ` : e.name
+                                    })}</p>
+                                </div>}
                             <div className={Styles.summary}>
                                 <h4>Summary:</h4>
                                 <p>{recipe.summary}</p>
                             </div>
                         </div>
                     </div>
-                    <h2>STEPS...</h2>
-                    {recipe.steps ? recipe.steps.map((e, i) => {
-                        return <div key={i} className={Styles.steps}><h4>{`${i + 1})`}</h4><p>{e}</p></div>
-                    }) : <h1>{"No Steps..."}</h1>}
-                    {recipe.itsCreated && <Link to={"/recipes"}><button className={Styles.deleteButton} onClick={deleteRecipe}>🗑️</button></Link>}
+                    <div className={Styles.stepsContainer}>
+                        <h2>STEPS 👨‍🍳</h2>
+                        {recipe.steps ? recipe.steps.map((e, i) => {
+                            return <div key={i} className={Styles.steps}><h4>{`${i + 1})`}</h4><p>{e}</p></div>
+                        }) : <img className={Styles.imgNoSteps} width={300} src="https://img.freepik.com/vector-premium/triste-cocinero-sostiene-espatula-cocina-su-mano-vector-ilustracion-plana_531064-2752.jpg?w=2000" alt="No Steps" />}
+                        {recipe.itsCreated && <Link to={"/recipes"}><button className={Styles.deleteButton} onClick={deleteRecipe}>🗑️</button></Link>}
+                    </div>
                 </div>
                 :
                 <div className={Styles.loading}>{<Loading />}</div>}

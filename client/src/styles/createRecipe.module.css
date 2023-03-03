@@ -1,6 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     height: 100vh;
     background-color: black;
@@ -9,6 +10,17 @@
     background-size: cover;
 
 }
+.body{
+    background:url("../img/fondo-comida-black.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+  
+}
+
 
 .container button:hover{
     background-color: red;

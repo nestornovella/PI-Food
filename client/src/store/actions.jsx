@@ -12,7 +12,7 @@ export const REFRESH_API = "REFRESH_API"
 export const ITS_CREATED_DATA = "ITS_CREATED_DATA"
 export const ASIGN_PAGE = "ASIGN_PAGE"
 
-export const serverBack = "https://pi-food-production-bf43.up.railway.app/api"
+export const serverBack = "http://localhost:3001/api"//"https://pi-food-production-bf43.up.railway.app/api"
 
 export function getAllRecipes (){
     return function(dispatch){

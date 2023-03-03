@@ -60,7 +60,7 @@ export default function CreateRecipe() {
         }
         else {
             if (e.target.value) {
-                
+
                 setInput({
                     ...input,
                     [e.target.name]: !input.diets.includes(e.target.value) ? [...input[e.target.name], e.target.value] : [...input.diets]
@@ -68,16 +68,12 @@ export default function CreateRecipe() {
             }
         }
     }
-    
+
     function createRecipe(recipe) {
         axios.post(`${serverBack}/recipes`, recipe)
             .then(response => console.log(response))
     }
-
-   
     
-
-
     function handleSubmit(e) {
         e.preventDefault()
         if (getLengthOfObject(error) === 0 && input.name && input.image && input.summary) {
@@ -100,11 +96,12 @@ export default function CreateRecipe() {
     function deleteDiet(e) {
         setInput({
             ...input,
-            diets: input.diets.filter((diet, i) => i !== e.target.value)
+            diets: input.diets.filter((diet, i) => i !== parseInt(e.target.value))
         })
-        console.log(e.target.value)
-    }
+        console.log("this is the event ", input.diets)
 
+    }
+ 
     function deleteSteps(e) {
         setInput({
             ...input,

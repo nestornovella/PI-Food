@@ -1,33 +1,33 @@
-
-
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.scoresDanger{
-    color:black
+.scoresDanger {
+    color: black
 }
-.scoresGood{
+
+.scoresGood {
     color: black;
 }
-.scoresYellow{
+
+.scoresYellow {
     color: black;
 }
-.renderRecipes{
+
+.renderRecipes {
     padding: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     color: red;
     font-weight: 700;
- 
+
 
 }
 
-.CardRecipe{
+.CardRecipe {
 
     border-radius: 15px;
     margin-right: 30px;
@@ -35,9 +35,9 @@
     padding: 10px;
     padding-right: 3px;
     width: 320px;
-   color: white;
-   box-shadow: 2px 2px 2px 1px rgb(73, 72, 72);
-   background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.745);
+    box-shadow: 2px 2px 2px 1px rgb(73, 72, 72);
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -45,34 +45,34 @@
     margin: 10px;
 }
 
-.CardRecipe h3{
+.CardRecipe h3 {
 
     margin: 10px;
     text-align: center;
     color: rgba(0, 0, 0, 0.745);
 }
 
-.CardRecipe img{
+.CardRecipe img {
     border-radius: 10px;
 }
 
-.CardRecipe h5{
+.CardRecipe h5 {
     color: rgba(0, 0, 0, 0.745);
 }
 
-.scoreMore{
+.scoreMore {
     display: flex;
     justify-content: space-between;
 }
 
-.diets{
+.diets {
     display: flex;
     align-items: center;
     margin-left: 10px;
     color: rgba(0, 0, 0, 0.745);
 }
 
-.dishTypes{
+.dishTypes {
     display: flex;
     align-items: center;
     margin-left: 10px;
